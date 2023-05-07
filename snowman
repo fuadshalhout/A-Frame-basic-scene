@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Snowman on Glitch</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Camera -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+      <!-- Lights -->
+      <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+      <a-light type="directional" color="#ffffff" intensity="0.8" position="-2 4 -2"></a-light>
+
+      <!-- Ground -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#ffffff"></a-plane>
+
+      <!-- Snowman Body -->
+      <a-sphere position="0 1.5 0" radius="1.5" color="#ffffff"></a-sphere>
+      <a-sphere position="0 4 0" radius="1" color="#ffffff"></a-sphere>
+      <a-sphere position="0 6 0" radius="0.5" color="#ffffff"></a-sphere>
+
+      <!-- Snowman Face -->
+      <a-entity position="0 6 0">
+        <a-sphere radius="0.1" color="#000000" position="0.2 0.2 0.45"></a-sphere>
+        <a-sphere radius="0.1" color="#000000" position="-0.2 0.2 0.45"></a-sphere>
+        <a-cone height="0.5" radius-bottom="0.15" radius-top="0" color="#FF6600" position="0 0.4 0.4" rotation="0 0 180"></a-cone>
+      </a-entity>
+
+      <!-- Snowman Arms -->
+      <a-entity position="0 4 0">
+        <a-cylinder height="2.5" radius="0.05" color="#8B4513" rotation="0 0 90" position="1 0.2 0"></a-cylinder>
+        <a-cylinder height="2.5" radius="0.05" color="#8B4513" rotation="0 0 -90" position="-1 0.2 0"></a-cylinder>
+      </a-entity>
+
+      <!-- Sky -->
+      <a-sky color="#b3e1ff"></a-sky>
+    </a-scene>
+  </body>
+</html>
